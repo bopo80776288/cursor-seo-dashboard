@@ -124,7 +124,7 @@ if uploaded_file:
             st.info("缺少 'Position' 或 'CTR' 欄位。")
 
     # Outlier Highlights
-    st.subheader("潛力關鍵字 (高曝光低CTR)")
+    st.subheader("亮點關鍵字")
     if all(col in df_clean.columns for col in ["Keyword", "Impressions", "CTR"]):
         avg_ctr = df_clean["CTR"].mean()
         high_impr = df_clean["Impressions"] > df_clean["Impressions"].median()
